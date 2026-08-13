@@ -1,32 +1,35 @@
-// Função para resgistrar logs no painel
-const painelLog = document.getElementById('log-painel');
+const btnGravador = document.getElementById("btn-gravador");
+const statusGravacao = document.getElementById("status-gravacao");
 
-function registrarLog(mensagem) {
-    
-    const novaLinha = document.createElement('div');
-    novaLinha.textContent = mensagem;
-    painelLog.appendChild(novaLinha);
 
-};
+//funçao para iniciar gravacao
+function pararGravacao() {
+    btnGravador.style.backgroundColor = "#3498db";
+    btnGravador.textContent = " Clique e Segure para Gravar";
+    statusGravacao.textContent = "Status: Pronto para gravar";
+}
 
-// Evento de Mouse
-const btnClique = document.getElementById('btn-clique');
-const areaMouse = document.getElementById('area-mouse');
+//captura eventos de pressionar e soltar o botão
+btnGravador.addEventListener("touchstart", pararGravacao);
+btnGravador.addEventListener("touchend", pararGravacao);
 
-btnClique.addEventListener('click', function() {
-    registrarLog("[CLIQUE] Evento de mouse: Evento 'click' detectado!");
+// Quando o usuário pressionar o botão
+btnGravador.addEventListener("pointerdown", () => {
+    btnGravador.style.backgroundColor = "#e74c3c";
+    btnGravador.textContent = "🔴 Gravando... Não solte!";
+
+    statusGravacao.textContent = "Status: Capturando áudio...";
 });
 
-// Evento de Mouse: mouseover
-areaMouse.addEventListener('mouseover', function() {
-    areaMouse.textContent = "Mouse sobre a área!";
-    areaMouse.style.backgroundColor = "#09aa11";
-    registrarLog("[MOUSE SOBRE] Evento de mouse: Evento 'mouseover' detectado!");
+// Quando o usuário soltar o botão
+btnGravador.addEventListener("pointerup", () => {
+    btnGravador.style.backgroundColor = "#3498db";
+    btnGravador.textContent = "🎤 Clique e Segure para Gravar";
+
+    statusGravacao.textContent = "Status: Gravação concluída e enviada!";
 });
 
-// Evento de Mouse: mouseleave
-areaMouse.addEventListener('mouseleave', function() {
-    areaMouse.textContent = "Mouse saiu da área!";
-    areaMouse.style.backgroundColor = "#ff0a0a";
-    registrarLog("[MOUSE SAIU] Evento de mouse: Evento 'mouseleave' detectado!");
+        // Caso o toque seja cancelado (ex: chamada no celular)
+btnGravador.addEventListener('pointercancel', () => {
+  resetarBotao();
 });
