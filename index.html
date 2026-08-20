@@ -1,49 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Personagens Disney</title>
-
     <link rel="stylesheet" href="css/style.css">
+
+    <title>Meu Disney</title>
 </head>
 
 <body>
 
-    <header>
-        <h1>Personagens Disney</h1>
-    
-    </header>
+      <header>
 
-    <main class="cards-container">
+    <img src="img/Disney-Simbolo.png" alt="Disney" class="imagem-disney">
 
+    <h1 class="titulo-disney">Meu Disney</h1>
 
-
-        <div class="personagem">
-            <div class="card"></div>
-            <h2>Minnie Mouse</h2>
-        </div>
+    <p id="mensagem">50 personagens carregados</p>
 
 
-        <div class="personagem">
-            <div class="card"></div>
-            <h2>Ariel</h2>
-        </div>
+</header>
 
-        <div class="personagem">
-            <div class="card"></div>
-            <h2>Elsa</h2>
-        </div>
+    <main>
 
-    
+        <div id="resultado" class="cards-container"></div>
 
-        <div class="personagem">
-            <div class="card"></div>
-            <h2>Cinderela</h2>
-        </div>
+        <section class="controles">
+
+            <button id="botaoCarregar">
+                Carregar mais 50
+            </button>
+
+            <p id="pagina">Página 1</p>
+
+        </section>
 
     </main>
 
+    <script src="js/script.js"></script>
+
 </body>
+
 </html>
