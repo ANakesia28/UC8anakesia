@@ -1,45 +1,52 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!-- Conecta o arquivo CSS ao HTML -->
+<link rel="stylesheet" href="css/style.css">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Conecta o arquivo manifest para transformar o site em PWA -->
+<link rel="manifest" href="manifest.json">
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel"manifest" href="manifest.json">
+<!-- Título que aparece na aba do navegador -->
+<title>Meu Disney</title>
 
-    <title>Meu Disney</title>
 </head>
 
 <body>
 
-      <header>
+    <!-- Cabeçalho do site -->
+    <header>
 
-    <img src="img/Disney-Simbolo.png" alt="Disney" class="imagem-disney">
+        <!-- Logo da Disney -->
+        <img src="img/Disney-Simbolo.png" alt="Disney" class="imagem-disney">
 
-    <h1 class="titulo-disney">Meu Disney</h1>
+        <!-- Título principal do site -->
+        <h1 class="titulo-disney">Meu Disney</h1>
 
-    <p id="mensagem">50 personagens carregados</p>
+        <!-- Mensagem mostrando a quantidade de personagens carregados -->
+        <p id="mensagem">50 personagens carregados</p>
 
+    </header>
 
-</header>
-
+    <!-- Conteúdo principal da página -->
     <main>
 
+        <!-- Local onde os personagens serão exibidos pelo JavaScript -->
         <div id="resultado" class="cards-container"></div>
 
+        <!-- Área dos controles da página -->
         <section class="controles">
 
+            <!-- Botão para carregar mais 50 personagens -->
             <button id="botaoCarregar">
                 Carregar mais 50
             </button>
 
+            <!-- Mostra o número da página atual -->
             <p id="pagina">Página 1</p>
 
         </section>
 
     </main>
 
+    <!-- Conecta o arquivo JavaScript ao HTML -->
     <script src="js/script.js"></script>
 
 </body>
