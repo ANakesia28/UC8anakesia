@@ -43,8 +43,10 @@ mundo-disney/
 | `index.html` |  Estrutura do site.                                              |
 | `style.css`  |  Estilo e aparência do site.                                     |
 | `script.js`  |  Funcionalidades e carregamento dos personagens                  |
-| `README.md`  |  descricão do meu site                                                                 |
-| `fonts/`     |  fonte para o site da disney                                                                |
+| `README.md`  |  descricão do meu site                                           |
+| `fonts/`     |  fonte para o site da disney                                     |
+| `img`        |  imagem da logo da disney                                        | 
+| `manifest.json` | é um arquivo que configura e identifica um aplicativo ou site, contendo informações como nome, ícone e versão. |
 > **Caso seu projeto possua outras pastas ou arquivos, apresente-os também na estrutura acima.**
 
 ---
